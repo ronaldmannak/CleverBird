@@ -5,7 +5,7 @@ import Foundation
 extension StreamableChatThread {
 
     public func complete(using connection: OpenAIAPIConnection,
-                         model: ChatModel = .gpt4,
+                         model: ChatModel = .gpt4o,
                          temperature: Percentage = 0.7,
                          topP: Percentage? = nil,
                          stop: [String]? = nil,
@@ -77,6 +77,10 @@ extension StreamableChatThread {
                             strongSelf.usage = usage
                         }
 
+                        if let usage = responseChunk.usage {
+                            strongSelf.usage = usage
+                        }
+                        
                         if let deltaRole = responseChunk.choices.first?.delta.role {
                             responseMessageRole = deltaRole
                             continue
@@ -95,6 +99,8 @@ extension StreamableChatThread {
                         } else {
                             responseMessageContent = deltaContent
                         }
+                        
+                        strongSelf.usage = responseChunk.usage
                         
                         continuation.yield(deltaContent)
                     }

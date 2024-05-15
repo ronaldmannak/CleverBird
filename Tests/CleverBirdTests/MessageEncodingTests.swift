@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 //
 //  ContentEncodingTests.swift
 //
 //
 //  Created by Ronald Mannak on 4/12/24.
 //
+=======
+//  Created by Ronald Mannak on 4/12/24.
+>>>>>>> main
 
 import XCTest
 @testable import CleverBird

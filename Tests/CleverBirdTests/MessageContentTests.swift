@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 //
 //  MessageContentTests.swift
 //  
 //
 //  Created by Ronald Mannak on 4/12/24.
 //
+=======
+//  Created by Ronald Mannak on 4/12/24.
+>>>>>>> main
 
 import Foundation
 import XCTest
