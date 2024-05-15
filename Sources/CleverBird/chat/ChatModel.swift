@@ -40,8 +40,6 @@ public enum ChatModel: Codable {
             return "gpt-4-turbo"
         case .gpt4:
             return "gpt-4"
-        case .gpt4Turbo:
-            return "gpt-4-turbo"
         case .specific(let specificString):
             return specificString
         }
