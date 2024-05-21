@@ -8,12 +8,6 @@ public struct EmbeddingResponse: Codable {
         public let index: Int
     }
 
-    public struct Usage: Codable {
-        public let promptTokens: Int
-        public let completionTokens: Int?
-        public let totalTokens: Int
-    }
-
     public let data: [EmbeddingData]
     public let usage: Usage
 }
